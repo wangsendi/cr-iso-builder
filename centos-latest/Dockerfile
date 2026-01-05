@@ -118,8 +118,8 @@ RUN ldconfig
 ENV PATH=/root/.local/bin:/root/go/bin:$PATH
 ENV TZ=Asia/Shanghai
 ENV IS_SANDBOX=1
-ENV LANG=en_US.UTF-8
-ENV LC_ALL=en_US.UTF-8
+ENV LANG=en_US.utf8
+ENV LC_ALL=en_US.utf8
 
 WORKDIR /apps/data
 COPY apps/ /apps/
