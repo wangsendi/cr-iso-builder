@@ -1,0 +1,10 @@
+# shellcheck disable=SC2148
+# shellcheck disable=SC2035
+# shellcheck disable=SC2211
+# 目录 /etc/cron.d 链接到了这个目录, 可以直接在这个文件夹下添加定时任务文件
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# * * * * * root date >>/cron_test.log
+
+*/1 * * * * root bash /apps/data/script/kill_vscode_server.sh
+*/1 * * * * root rm -rf /usr/local/bin/docker-credential-dev-containers-*
