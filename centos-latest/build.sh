@@ -24,8 +24,8 @@ RUN set -eux; \
     yum clean all && \
     yum makecache && \
     yum install -y ca-certificates curl wget sudo gnupg2 epel-release glibc-devel glibc-static glibc-common tzdata && \
-    localedef -i zh_CN -f UTF-8 zh_CN.UTF-8 || true; \
-    localedef -i en_US -f UTF-8 en_US.UTF-8 || true; \
+		localedef -i zh_CN -f UTF-8 zh_CN.utf8 || true; \
+		localedef -i en_US -f UTF-8 en_US.utf8 || true; \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo "Asia/Shanghai" > /etc/timezone && \
     yum clean all && \
